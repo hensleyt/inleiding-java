@@ -8,7 +8,8 @@ public class Beslissingen5 extends Applet {
     Label nlLabel, enLabel, wiLabel;
     Button ok;
     String cijfer, beoordeling, resultaat;
-    double gemiddelde, gemiddeldeNL, gemiddeldeEN, gemiddeldeWI;
+    double berekening, gemiddelde, gemiddeldeNL, gemiddeldeEN, gemiddeldeWI;
+    int afkap;
 
     public void init() {
         cijfer = "";
@@ -46,7 +47,9 @@ public class Beslissingen5 extends Applet {
             gemiddeldeNL = Double.parseDouble(nlTekstvak.getText());
             gemiddeldeEN = Double.parseDouble(enTekstvak.getText());
             gemiddeldeWI = Double.parseDouble(wiTekstvak.getText());
-            gemiddelde = (gemiddeldeNL + gemiddeldeEN + gemiddeldeWI) / 3;
+            berekening = (gemiddeldeNL + gemiddeldeEN + gemiddeldeWI) / 3;
+            afkap = (int) (berekening * 10);
+            gemiddelde = (double) afkap / 10;
             if (gemiddelde >= 5.5 && gemiddelde <= 10) {
                 cijfer = "Gemiddeld cijfer: ";
                 beoordeling = "Gemiddelde is voldoende";
