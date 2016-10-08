@@ -11,9 +11,9 @@ public class Beslissingenpraktijk extends Applet {
 
     public void init() {
         beoordeling = "";
-        instructieLabel = new Label("Type het cijfer in en druk op enter");
+        instructieLabel = new Label("Typ het cijfer in en druk op enter");
         add(instructieLabel);
-        tekstvak = new TextField("", 20);
+        tekstvak = new TextField("", 3);
         tekstvak.addActionListener( new CijferListener() );
         add(tekstvak);
     }

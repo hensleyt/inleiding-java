@@ -11,9 +11,9 @@ public class Beslissingen3 extends Applet {
 
     public void init() {
         Maand = "";
-        instructieLabel = new Label("Type het maandnummer in en druk op enter");
+        instructieLabel = new Label("Typ het maandnummer in en druk op enter");
         add(instructieLabel);
-        tekstvak = new TextField("", 20);
+        tekstvak = new TextField("", 2);
         tekstvak.addActionListener( new CijferListener() );
         add(tekstvak);
     }
@@ -77,6 +77,7 @@ public class Beslissingen3 extends Applet {
                     break;
                 default:
                     Maand = "Dit maand bestaat niet ..!";
+                    Dagen = "";
                     break;
             }
             repaint();
