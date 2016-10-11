@@ -11,6 +11,7 @@ public class Beslissingen3 extends Applet {
 
     public void init() {
         Maand = "";
+        Dagen = "";
         instructieLabel = new Label("Typ het maandnummer in en druk op enter");
         add(instructieLabel);
         tekstvak = new TextField("", 2);
@@ -33,7 +34,7 @@ public class Beslissingen3 extends Applet {
                     break;
                 case 2:
                     Maand = "Maand: Februari";
-                    Dagen = "Heeft aantal dagen: 28";
+                    Dagen = "Heeft aantal dagen: 28 en 29 dagen als het schrikkeljaar is";
                     break;
                 case 3:
                     Maand = "Maand: Maart";
@@ -76,7 +77,7 @@ public class Beslissingen3 extends Applet {
                     Dagen = "Heeft aantal dagen: 31";
                     break;
                 default:
-                    Maand = "Dit maand bestaat niet ..!";
+                    Maand = "Deze maand bestaat niet ..!";
                     Dagen = "";
                     break;
             }
