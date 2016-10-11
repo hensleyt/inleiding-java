@@ -10,6 +10,9 @@ public class Beslissingen4 extends Applet {
     int maandNr, jaartal;
 
     public void init() {
+        Maand = "";
+        Dagen = "";
+        Jaar = "";
         instructieLabel = new Label("Typ het jaartal en het maandnummer in en druk daarna op enter");
 
         jaarLabel = new Label("Jaar");
