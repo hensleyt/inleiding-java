@@ -5,18 +5,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Herhalingpraktijk2 extends Applet {
-    TextField invoerGetal;
     Button knop;
-    int teller, ingevoerdTafel, berekeningAntwoord;
-    String schermtekst;
+    int teller, ingevoerdTafel = 0, berekeningAntwoord;
     public void init() {
-        invoerGetal = new TextField("",5);
-        invoerGetal.addActionListener(new KnopListener());
-        add(invoerGetal);
         knop = new Button("Ok");
         knop.addActionListener(new KnopListener());
         add(knop);
-        schermtekst = "";
     }
 
     public void paint(Graphics g) {
@@ -32,7 +26,9 @@ public class Herhalingpraktijk2 extends Applet {
     }
     class KnopListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            ingevoerdTafel = Integer.parseInt(invoerGetal.getText());
+            if (ingevoerdTafel < 10) {
+                ingevoerdTafel += 1;
+            }
             repaint();
         }
     }

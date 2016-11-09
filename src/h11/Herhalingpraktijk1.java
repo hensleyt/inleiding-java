@@ -8,7 +8,6 @@ public class Herhalingpraktijk1 extends Applet {
     TextField invoerGetal;
     Button knop;
     int teller, ingevoerdTafel, berekeningAntwoord;
-    String schermtekst;
     public void init() {
         invoerGetal = new TextField("",5);
         invoerGetal.addActionListener(new KnopListener());
@@ -16,7 +15,6 @@ public class Herhalingpraktijk1 extends Applet {
         knop = new Button("Ok");
         knop.addActionListener(new KnopListener());
         add(knop);
-        schermtekst = "";
     }
 
     public void paint(Graphics g) {
